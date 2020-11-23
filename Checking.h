@@ -14,6 +14,4 @@ public:
 protected:
 	unsigned overdrawnCount{ 0 };
 
-
-
 };
