@@ -3,15 +3,12 @@
 
 
 Checking::Checking()
-{
-	accountNumber = accountTally++;
-}
+{}
 
 Checking::Checking(const std::string& first, const std::string& last)
 {
 	firstName = first;
 	lastName = last;
-	accountNumber = accountTally++;
 }
 
 void Checking::withdraw(unsigned long long amt)

@@ -3,14 +3,12 @@
 
 PremiumChecking::PremiumChecking()
 {
-	accountNumber = accountTally++;
 }
 
 PremiumChecking::PremiumChecking(const std::string& first, const std::string& last)
 {
 	firstName = first;
 	lastName = last;
-	accountNumber = accountTally++;
 }
 
 void PremiumChecking::chargeMonthlyFee()
