@@ -1,16 +1,19 @@
 #include "Checking.h";
 #include <iostream>
 
-
+//Deafault Constructor
 Checking::Checking()
 {}
-
+//Constructor sets the first and last names of the account
 Checking::Checking(const std::string& first, const std::string& last)
 {
 	firstName = first;
 	lastName = last;
 }
 
+//Withdraws a positive amount of money from the balance of the account
+//Overdrawing on the account will cancel the transaction and penalitze the user with a fee
+//The penaltiy is $10.00 for the first 3 overdraws and $30.00 for all other overdraws
 void Checking::withdraw(unsigned long long amt)
 {
 	if (amt <= 0) 
@@ -31,12 +34,12 @@ void Checking::withdraw(unsigned long long amt)
 		if (overdrawnCount < 3) 
 		{ 
 			std::cout << "10.00$";
-			balance -= 10;
+			balance -= 1000;
 		}
 		else 
 		{
 			std::cout << "30.00$"; 
-			balance -= 30;
+			balance -= 3000;
 		}
 		std::cout << std::endl;
 		return;
@@ -46,11 +49,13 @@ void Checking::withdraw(unsigned long long amt)
 
 }
 
+//Getter for the amount of overdraws to user has accrued
 unsigned int Checking::getOverdrawnCount() const
 {
 	return overdrawnCount;
 }
 
+//Displays the info of the checking account
 void Checking::display() const
 {
 	Account::display();

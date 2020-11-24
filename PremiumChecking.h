@@ -1,3 +1,5 @@
+//Represents a bank premium checking account and allows the user to withdraw money from the account but costs a monthly fee
+//The user is allowed to overdraw from the account but only up to 200$, no overdraw penalties occur for overdrawing
 #pragma once
 
 #include "Account.h"
